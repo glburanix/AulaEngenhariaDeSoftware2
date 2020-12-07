@@ -1,0 +1,24 @@
+create database Academia;
+
+use Academia;
+
+CREATE TABLE ALUNOS (
+id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome Varchar(200) NOT NULL,
+cpf CHAR(14) UNIQUE NOT NULL,
+idade INT,
+data_inicio DATE,
+peso DECIMAL,
+altura DECIMAL,
+sexo CHAR(1),
+id_plano int, 
+FOREIGN KEY(id_plano) REFERENCES PLANOS (id)
+);
+
+CREATE TABLE PLANOS (
+id_plano int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome_plano Varchar(50) NOT NULL,
+valor_plano DECIMAL,
+duracao_plano int
+);
+

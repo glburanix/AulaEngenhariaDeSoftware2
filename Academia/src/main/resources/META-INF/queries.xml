@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.0" xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+
+    <named-query name="alunos.todas">
+        <query>SELECT a FROM Alunos a</query>
+    </named-query>
+
+    <named-query name="alunos.porNome">
+        <query>SELECT a FROM Alunos a where a.nome = :t ORDER BY a.nome</query>
+    </named-query>
+    
+    <named-query name="planos.todos">
+        <query>SELECT p FROM Planos p</query>
+    </named-query>
+    
+    <named-query name="planos.porNome">
+        <query>SELECT p FROM Planos p where p.nome_plano = :t ORDER BY p.nome_plano</query>
+    </named-query>
+    
+    
+</entity-mappings>
